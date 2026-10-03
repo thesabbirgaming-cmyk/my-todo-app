@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#6366f1">
+
+    <title>My Todo — Premium Productivity App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background decoration -->
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+
+    <main class="app-shell">
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="app-header">
+
+            <div class="brand-area">
+
+                <div class="brand-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <h1>My Todo</h1>
+                    <p>Stay focused. Get things done.</p>
+                </div>
+
+            </div>
+
+            <button
+                id="themeButton"
+                class="icon-button"
+                type="button"
+                aria-label="Toggle theme"
+            >
+                <span id="themeIcon">☾</span>
+            </button>
+
+        </header>
+
+
+        <!-- =========================
+             GREETING
+        ========================== -->
+
+        <section class="welcome-section">
+
+            <div>
+                <span class="eyebrow">YOUR PRODUCTIVITY</span>
+
+                <h2 id="greetingTitle">
+                    Good evening 👋
+                </h2>
+
+                <p>
+                    Organize your day and turn your plans into progress.
+                </p>
+            </div>
+
+            <div class="date-chip">
+                <span>📅</span>
+                <span id="todayDate">Today</span>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             STATISTICS
+        ========================== -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-icon total-icon">📋</div>
+
+                <div>
+                    <span>Total Tasks</span>
+                    <strong id="totalCount">0</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon completed-icon">✓</div>
+
+                <div>
+                    <span>Completed</span>
+                    <strong id="completedCount">0</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon pending-icon">◷</div>
+
+                <div>
+                    <span>Pending</span>
+                    <strong id="pendingCount">0</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <div class="stat-icon progress-icon">↗</div>
+
+                <div>
+                    <span>Progress</span>
+                    <strong id="percentageCount">0%</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ADD TASK
+        ========================== -->
+
+        <section class="add-task-card">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">QUICK ACTION</span>
+                    <h3>Add a new task</h3>
+                </div>
+
+                <span class="keyboard-hint">ENTER ↵</span>
+            </div>
+
+
+            <div class="task-input-row">
+
+                <div class="input-wrapper">
+
+                    <span class="input-icon">✦</span>
+
+                    <input
+                        id="taskInput"
+                        type="text"
+                        maxlength="200"
+                        autocomplete="off"
+                        placeholder="What needs to be done?"
+                    >
+
+                </div>
+
+
+                <select id="priorityInput">
+
+                    <option value="low">
+                        🟢 Low
+                    </option>
+
+                    <option value="medium" selected>
+                        🟡 Medium
+                    </option>
+
+                    <option value="high">
+                        🔴 High
+                    </option>
+
+                </select>
+
+
+                <button
+                    id="addButton"
+                    class="primary-button"
+                    type="button"
+                >
+                    <span>+</span>
+                    Add Task
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROGRESS
+        ========================== -->
+
+        <section class="progress-card">
+
+            <div class="progress-header">
+
+                <div>
+                    <span class="eyebrow">TODAY'S PROGRESS</span>
+
+                    <strong id="progressLabel">
+                        0 of 0 completed
+                    </strong>
+                </div>
+
+                <strong id="progressPercentage">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div class="progress-track">
+
+                <div
+                    id="progressBar"
+                    class="progress-fill"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TASK SECTION
+        ========================== -->
+
+        <section class="tasks-section">
+
+            <div class="tasks-heading">
+
+                <div>
+                    <span class="eyebrow">TASK MANAGER</span>
+                    <h3>Your tasks</h3>
+                </div>
+
+                <button
+                    id="clearAllButton"
+                    class="danger-outline"
+                    type="button"
+                >
+                    🗑 Clear all
+                </button>
+
+            </div>
+
+
+            <!-- Search -->
+
+            <div class="search-wrapper">
+
+                <span>⌕</span>
+
+                <input
+                    id="searchInput"
+                    type="search"
+                    autocomplete="off"
+                    placeholder="Search your tasks..."
+                >
+
+                <button
+                    id="clearSearch"
+                    class="clear-search"
+                    type="button"
+                    aria-label="Clear search"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- Main filters -->
+
+            <div class="filter-bar">
+
+                <button
+                    class="filter-button active"
+                    data-filter="all"
+                    type="button"
+                >
+                    All
+                    <span id="allFilterCount">0</span>
+                </button>
+
+
+                <button
+                    class="filter-button"
+                    data-filter="active"
+                    type="button"
+                >
+                    Active
+                </button>
+
+
+                <button
+                    class="filter-button"
+                    data-filter="completed"
+                    type="button"
+                >
+                    Completed
+                </button>
+
+            </div>
+
+
+            <!-- Priority filters -->
+
+            <div class="priority-filter-bar">
+
+                <button
+                    class="priority-filter"
+                    data-priority="all"
+                    type="button"
+                >
+                    All priorities
+                </button>
+
+                <button
+                    class="priority-filter"
+                    data-priority="high"
+                    type="button"
+                >
+                    <i class="priority-dot high"></i>
+                    High
+                </button>
+
+                <button
+                    class="priority-filter"
+                    data-priority="medium"
+                    type="button"
+                >
+                    <i class="priority-dot medium"></i>
+                    Medium
+                </button>
+
+                <button
+                    class="priority-filter"
+                    data-priority="low"
+                    type="button"
+                >
+                    <i class="priority-dot low"></i>
+                    Low
+                </button>
+
+            </div>
+
+
+            <!-- Task list -->
+
+            <div id="taskList" class="task-list"></div>
+
+
+            <!-- Empty state -->
+
+            <div
+                id="emptyState"
+                class="empty-state"
+            >
+
+                <div class="empty-icon">
+                    ✓
+                </div>
+
+                <h3 id="emptyTitle">
+                    No tasks yet
+                </h3>
+
+                <p id="emptyText">
+                    Add your first task and start making progress.
+                </p>
+
+                <button
+                    id="emptyAddButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    + Create your first task
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer class="app-footer">
+
+            <span>
+                My Todo
+            </span>
+
+            <span class="footer-dot">•</span>
+
+            <span>
+                Built for productivity
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- =========================
+         EDIT MODAL
+    ========================== -->
+
+    <div
+        id="editModal"
+        class="modal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-box">
+
+            <div class="modal-header">
+
+                <div>
+                    <span class="eyebrow">EDIT TASK</span>
+                    <h2>Update your task</h2>
+                </div>
+
+                <button
+                    id="closeEditButton"
+                    class="modal-close"
+                    type="button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <label for="editTaskInput">
+                Task name
+            </label>
+
+            <input
+                id="editTaskInput"
+                type="text"
+                maxlength="200"
+                autocomplete="off"
+                placeholder="Edit your task..."
+            >
+
+
+            <label for="editPriorityInput">
+                Priority
+            </label>
+
+            <select id="editPriorityInput">
+
+                <option value="low">
+                    🟢 Low Priority
+                </option>
+
+                <option value="medium">
+                    🟡 Medium Priority
+                </option>
+
+                <option value="high">
+                    🔴 High Priority
+                </option>
+
+            </select>
+
+
+            <div class="modal-actions">
+
+                <button
+                    id="cancelEditButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    id="saveEditButton"
+                    class="primary-button"
+                    type="button"
+                >
+                    Save changes
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         DELETE CONFIRMATION
+    ========================== -->
+
+    <div
+        id="confirmModal"
+        class="modal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-box confirm-box">
+
+            <div class="confirm-icon">
+                🗑
+            </div>
+
+            <h2 id="confirmTitle">
+                Delete task?
+            </h2>
+
+            <p id="confirmText">
+                This action cannot be undone.
+            </p>
+
+            <div class="modal-actions">
+
+                <button
+                    id="cancelConfirmButton"
+                    class="secondary-button"
+                    type="button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    id="confirmDeleteButton"
+                    class="danger-button"
+                    type="button"
+                >
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         TOAST
+    ========================== -->
+
+    <div
+        id="toast"
+        class="toast"
+        role="status"
+    >
+        <span id="toastIcon">✓</span>
+        <span id="toastMessage">Task added</span>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
