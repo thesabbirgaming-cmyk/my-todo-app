@@ -4,180 +4,333 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="theme-color" content="#6366f1">
-
-    <title>My Todo — Premium Productivity App</title>
+    <title>Tajin's Little World 💕</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Background decoration -->
-    <div class="background-orb orb-one"></div>
-    <div class="background-orb orb-two"></div>
+    <!-- ============================= -->
+    <!-- FLOATING LOVE EFFECTS -->
+    <!-- ============================= -->
+
+    <div class="love-background">
+        <span>💗</span>
+        <span>💕</span>
+        <span>💖</span>
+        <span>💘</span>
+        <span>💞</span>
+        <span>💓</span>
+        <span>✨</span>
+        <span>💗</span>
+        <span>💕</span>
+        <span>✨</span>
+        <span>💖</span>
+        <span>💞</span>
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- BACKGROUND ORBS -->
+    <!-- ============================= -->
+
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+
+    <!-- ============================= -->
+    <!-- MAIN APP -->
+    <!-- ============================= -->
 
     <main class="app-shell">
 
-        <!-- =========================
-             HEADER
-        ========================== -->
+        <!-- ============================= -->
+        <!-- HEADER -->
+        <!-- ============================= -->
 
         <header class="app-header">
 
-            <div class="brand-area">
+            <div class="brand">
 
                 <div class="brand-icon">
-                    ✓
+                    💕
                 </div>
 
-                <div>
-                    <h1>My Todo</h1>
-                    <p>Stay focused. Get things done.</p>
+                <div class="brand-text">
+
+                    <h1>Tajin's Little World</h1>
+
+                    <p>
+                        A little place made just for you 💗
+                    </p>
+
                 </div>
 
             </div>
 
+
+            <!-- THEME BUTTON -->
+
             <button
-                id="themeButton"
-                class="icon-button"
-                type="button"
-                aria-label="Toggle theme"
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
             >
-                <span id="themeIcon">☾</span>
+                🌙
             </button>
 
         </header>
 
 
-        <!-- =========================
-             GREETING
-        ========================== -->
+        <!-- ============================= -->
+        <!-- ROMANTIC WELCOME -->
+        <!-- ============================= -->
 
         <section class="welcome-section">
 
-            <div>
-                <span class="eyebrow">YOUR PRODUCTIVITY</span>
+            <div class="welcome-content">
 
-                <h2 id="greetingTitle">
-                    Good evening 👋
+                <div class="love-badge">
+                    💌 Just for Tajin
+                </div>
+
+                <h2 id="greeting">
+                    Hello, Tajin 💕
                 </h2>
 
-                <p>
-                    Organize your day and turn your plans into progress.
+                <h3 class="romantic-title">
+                    You make ordinary days feel special ✨
+                </h3>
+
+                <p class="welcome-message">
+                    Keep your little dreams, plans and tasks here.
+                    One small step at a time,
+                    and don't forget to smile along the way. 💗
                 </p>
+
+                <div class="heart-message">
+                    <span>♡</span>
+                    Made with a little bit of love
+                    <span>♡</span>
+                </div>
+
             </div>
 
-            <div class="date-chip">
-                <span>📅</span>
-                <span id="todayDate">Today</span>
+
+            <!-- DATE -->
+
+            <div class="date-card">
+
+                <div class="date-icon">
+                    🌸
+                </div>
+
+                <div>
+
+                    <span class="date-label">
+                        Today
+                    </span>
+
+                    <strong id="currentDate">
+                        Loading...
+                    </strong>
+
+                </div>
+
             </div>
 
         </section>
 
 
-        <!-- =========================
-             STATISTICS
-        ========================== -->
+        <!-- ============================= -->
+        <!-- LOVE QUOTE -->
+        <!-- ============================= -->
+
+        <section class="love-quote">
+
+            <div class="quote-heart">
+                ❤️
+            </div>
+
+            <div class="quote-content">
+
+                <p>
+                    "Small things become beautiful
+                    when they are done with love."
+                </p>
+
+                <span>
+                    — For Tajin 💕
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- STATS -->
+        <!-- ============================= -->
 
         <section class="stats-grid">
 
-            <div class="stat-card">
-                <div class="stat-icon total-icon">📋</div>
+            <!-- TOTAL -->
 
-                <div>
-                    <span>Total Tasks</span>
-                    <strong id="totalCount">0</strong>
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    📝
                 </div>
+
+                <div class="stat-info">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="totalCount">
+                        0
+                    </strong>
+
+                </div>
+
             </div>
 
 
-            <div class="stat-card">
-                <div class="stat-icon completed-icon">✓</div>
+            <!-- COMPLETED -->
 
-                <div>
-                    <span>Completed</span>
-                    <strong id="completedCount">0</strong>
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    💚
                 </div>
+
+                <div class="stat-info">
+
+                    <span>
+                        Completed
+                    </span>
+
+                    <strong id="completedCount">
+                        0
+                    </strong>
+
+                </div>
+
             </div>
 
 
-            <div class="stat-card">
-                <div class="stat-icon pending-icon">◷</div>
+            <!-- PENDING -->
 
-                <div>
-                    <span>Pending</span>
-                    <strong id="pendingCount">0</strong>
+            <div class="stat-card">
+
+                <div class="stat-icon orange">
+                    🌷
                 </div>
+
+                <div class="stat-info">
+
+                    <span>
+                        Pending
+                    </span>
+
+                    <strong id="pendingCount">
+                        0
+                    </strong>
+
+                </div>
+
             </div>
 
 
-            <div class="stat-card">
-                <div class="stat-icon progress-icon">↗</div>
+            <!-- PROGRESS -->
 
-                <div>
-                    <span>Progress</span>
-                    <strong id="percentageCount">0%</strong>
+            <div class="stat-card">
+
+                <div class="stat-icon pink">
+                    💖
                 </div>
+
+                <div class="stat-info">
+
+                    <span>
+                        Progress
+                    </span>
+
+                    <strong id="progressPercent">
+                        0%
+                    </strong>
+
+                </div>
+
             </div>
 
         </section>
 
 
-        <!-- =========================
-             ADD TASK
-        ========================== -->
+        <!-- ============================= -->
+        <!-- ADD TASK -->
+        <!-- ============================= -->
 
         <section class="add-task-card">
 
             <div class="section-heading">
+
                 <div>
-                    <span class="eyebrow">QUICK ACTION</span>
-                    <h3>Add a new task</h3>
+
+                    <span class="section-mini">
+                        💕 Your little plans
+                    </span>
+
+                    <h2>
+                        What do you want to do?
+                    </h2>
+
                 </div>
 
-                <span class="keyboard-hint">ENTER ↵</span>
             </div>
 
 
-            <div class="task-input-row">
+            <div class="add-task-form">
 
-                <div class="input-wrapper">
+                <div class="task-input-wrapper">
 
-                    <span class="input-icon">✦</span>
+                    <span class="input-icon">
+                        ✨
+                    </span>
 
                     <input
-                        id="taskInput"
                         type="text"
-                        maxlength="200"
+                        id="taskInput"
+                        placeholder="Write something for your day..."
                         autocomplete="off"
-                        placeholder="What needs to be done?"
                     >
 
                 </div>
 
 
-                <select id="priorityInput">
+                <select id="prioritySelect">
 
                     <option value="low">
-                        🟢 Low
+                        🌱 Low
                     </option>
 
                     <option value="medium" selected>
-                        🟡 Medium
+                        🌸 Medium
                     </option>
 
                     <option value="high">
-                        🔴 High
+                        💖 High
                     </option>
 
                 </select>
 
 
                 <button
-                    id="addButton"
-                    class="primary-button"
-                    type="button"
+                    id="addTaskBtn"
+                    class="add-task-btn"
                 >
                     <span>+</span>
                     Add Task
@@ -188,23 +341,27 @@
         </section>
 
 
-        <!-- =========================
-             PROGRESS
-        ========================== -->
+        <!-- ============================= -->
+        <!-- PROGRESS CARD -->
+        <!-- ============================= -->
 
         <section class="progress-card">
 
             <div class="progress-header">
 
                 <div>
-                    <span class="eyebrow">TODAY'S PROGRESS</span>
 
-                    <strong id="progressLabel">
-                        0 of 0 completed
-                    </strong>
+                    <span class="progress-label">
+                        💗 Little steps
+                    </span>
+
+                    <h3>
+                        Your progress
+                    </h3>
+
                 </div>
 
-                <strong id="progressPercentage">
+                <strong id="progressText">
                     0%
                 </strong>
 
@@ -214,57 +371,76 @@
             <div class="progress-track">
 
                 <div
-                    id="progressBar"
                     class="progress-fill"
+                    id="progressFill"
+                    style="width: 0%"
                 ></div>
 
             </div>
 
+
+            <p id="completionMessage">
+                Every little step counts. 🌷
+            </p>
+
         </section>
 
 
-        <!-- =========================
-             TASK SECTION
-        ========================== -->
+        <!-- ============================= -->
+        <!-- TASK MANAGER -->
+        <!-- ============================= -->
 
         <section class="tasks-section">
 
-            <div class="tasks-heading">
+
+            <!-- TASK HEADER -->
+
+            <div class="tasks-header">
 
                 <div>
-                    <span class="eyebrow">TASK MANAGER</span>
-                    <h3>Your tasks</h3>
+
+                    <span class="section-mini">
+                        📋 Your list
+                    </span>
+
+                    <h2>
+                        Things to remember
+                    </h2>
+
                 </div>
 
+
                 <button
-                    id="clearAllButton"
-                    class="danger-outline"
-                    type="button"
+                    id="clearAllBtn"
+                    class="clear-all-btn"
                 >
-                    🗑 Clear all
+                    🗑️ Clear All
                 </button>
 
             </div>
 
 
-            <!-- Search -->
+            <!-- ============================= -->
+            <!-- SEARCH -->
+            <!-- ============================= -->
 
             <div class="search-wrapper">
 
-                <span>⌕</span>
+                <span>
+                    🔍
+                </span>
 
                 <input
+                    type="text"
                     id="searchInput"
-                    type="search"
-                    autocomplete="off"
                     placeholder="Search your tasks..."
+                    autocomplete="off"
                 >
 
                 <button
-                    id="clearSearch"
+                    id="clearSearchBtn"
                     class="clear-search"
                     type="button"
-                    aria-label="Clear search"
                 >
                     ×
                 </button>
@@ -272,201 +448,217 @@
             </div>
 
 
-            <!-- Main filters -->
+            <!-- ============================= -->
+            <!-- FILTERS -->
+            <!-- ============================= -->
 
-            <div class="filter-bar">
-
-                <button
-                    class="filter-button active"
-                    data-filter="all"
-                    type="button"
-                >
-                    All
-                    <span id="allFilterCount">0</span>
-                </button>
+            <div class="filters-area">
 
 
-                <button
-                    class="filter-button"
-                    data-filter="active"
-                    type="button"
-                >
-                    Active
-                </button>
+                <!-- STATUS FILTER -->
+
+                <div class="filter-group">
+
+                    <span class="filter-title">
+                        Status
+                    </span>
+
+                    <div class="filter-buttons">
+
+                        <button
+                            class="filter-btn active"
+                            data-filter="all"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-filter="active"
+                        >
+                            Active
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-filter="completed"
+                        >
+                            Completed
+                        </button>
+
+                    </div>
+
+                </div>
 
 
-                <button
-                    class="filter-button"
-                    data-filter="completed"
-                    type="button"
-                >
-                    Completed
-                </button>
+                <!-- PRIORITY FILTER -->
+
+                <div class="filter-group">
+
+                    <span class="filter-title">
+                        Priority
+                    </span>
+
+                    <div class="priority-filter-buttons">
+
+                        <button
+                            class="priority-filter-btn active"
+                            data-priority="all"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            class="priority-filter-btn"
+                            data-priority="high"
+                        >
+                            💖 High
+                        </button>
+
+                        <button
+                            class="priority-filter-btn"
+                            data-priority="medium"
+                        >
+                            🌸 Medium
+                        </button>
+
+                        <button
+                            class="priority-filter-btn"
+                            data-priority="low"
+                        >
+                            🌱 Low
+                        </button>
+
+                    </div>
+
+                </div>
 
             </div>
 
 
-            <!-- Priority filters -->
+            <!-- ============================= -->
+            <!-- RESULT COUNT -->
+            <!-- ============================= -->
 
-            <div class="priority-filter-bar">
+            <div class="result-info">
 
-                <button
-                    class="priority-filter"
-                    data-priority="all"
-                    type="button"
-                >
-                    All priorities
-                </button>
-
-                <button
-                    class="priority-filter"
-                    data-priority="high"
-                    type="button"
-                >
-                    <i class="priority-dot high"></i>
-                    High
-                </button>
-
-                <button
-                    class="priority-filter"
-                    data-priority="medium"
-                    type="button"
-                >
-                    <i class="priority-dot medium"></i>
-                    Medium
-                </button>
-
-                <button
-                    class="priority-filter"
-                    data-priority="low"
-                    type="button"
-                >
-                    <i class="priority-dot low"></i>
-                    Low
-                </button>
+                <span id="resultCount">
+                    0 tasks
+                </span>
 
             </div>
 
 
-            <!-- Task list -->
+            <!-- ============================= -->
+            <!-- TASK LIST -->
+            <!-- ============================= -->
 
-            <div id="taskList" class="task-list"></div>
+            <div
+                id="taskList"
+                class="task-list"
+            >
+            </div>
 
 
-            <!-- Empty state -->
+            <!-- ============================= -->
+            <!-- EMPTY STATE -->
+            <!-- ============================= -->
 
             <div
                 id="emptyState"
                 class="empty-state"
             >
 
-                <div class="empty-icon">
-                    ✓
+                <div class="empty-heart">
+                    💗
                 </div>
 
-                <h3 id="emptyTitle">
-                    No tasks yet
+                <h3>
+                    Nothing here yet
                 </h3>
 
-                <p id="emptyText">
-                    Add your first task and start making progress.
+                <p>
+                    Add a little task and make your day beautiful. 🌸
                 </p>
-
-                <button
-                    id="emptyAddButton"
-                    class="secondary-button"
-                    type="button"
-                >
-                    + Create your first task
-                </button>
 
             </div>
 
         </section>
 
 
-        <!-- =========================
-             FOOTER
-        ========================== -->
+        <!-- ============================= -->
+        <!-- FOOTER -->
+        <!-- ============================= -->
 
         <footer class="app-footer">
 
-            <span>
-                My Todo
-            </span>
+            <div class="footer-heart">
+                💕
+            </div>
 
-            <span class="footer-dot">•</span>
+            <p>
+                Made especially for
+                <strong>Tajin</strong>
+                <span>♡</span>
+            </p>
 
-            <span>
-                Built for productivity
-            </span>
+            <small>
+                Keep smiling. You are special. ✨
+            </small>
 
         </footer>
 
     </main>
 
 
-    <!-- =========================
-         EDIT MODAL
-    ========================== -->
+    <!-- ============================= -->
+    <!-- EDIT MODAL -->
+    <!-- ============================= -->
 
     <div
         id="editModal"
-        class="modal"
-        aria-hidden="true"
+        class="modal-overlay"
     >
 
-        <div class="modal-backdrop"></div>
+        <div class="modal-card">
 
-        <div class="modal-box">
+            <button
+                id="closeEditModal"
+                class="modal-close"
+            >
+                ×
+            </button>
 
-            <div class="modal-header">
-
-                <div>
-                    <span class="eyebrow">EDIT TASK</span>
-                    <h2>Update your task</h2>
-                </div>
-
-                <button
-                    id="closeEditButton"
-                    class="modal-close"
-                    type="button"
-                >
-                    ×
-                </button>
-
+            <div class="modal-icon">
+                ✏️
             </div>
 
+            <h2>
+                Edit your task
+            </h2>
 
-            <label for="editTaskInput">
-                Task name
-            </label>
+            <p>
+                Make it exactly the way you want. 💕
+            </p>
 
             <input
-                id="editTaskInput"
                 type="text"
-                maxlength="200"
-                autocomplete="off"
-                placeholder="Edit your task..."
+                id="editTaskInput"
+                placeholder="Edit task..."
             >
 
-
-            <label for="editPriorityInput">
-                Priority
-            </label>
-
-            <select id="editPriorityInput">
+            <select id="editPrioritySelect">
 
                 <option value="low">
-                    🟢 Low Priority
+                    🌱 Low
                 </option>
 
                 <option value="medium">
-                    🟡 Medium Priority
+                    🌸 Medium
                 </option>
 
                 <option value="high">
-                    🔴 High Priority
+                    💖 High
                 </option>
 
             </select>
@@ -475,19 +667,17 @@
             <div class="modal-actions">
 
                 <button
-                    id="cancelEditButton"
-                    class="secondary-button"
-                    type="button"
+                    id="cancelEditBtn"
+                    class="modal-cancel"
                 >
                     Cancel
                 </button>
 
                 <button
-                    id="saveEditButton"
-                    class="primary-button"
-                    type="button"
+                    id="saveEditBtn"
+                    class="modal-save"
                 >
-                    Save changes
+                    💕 Save Changes
                 </button>
 
             </div>
@@ -497,48 +687,51 @@
     </div>
 
 
-    <!-- =========================
-         DELETE CONFIRMATION
-    ========================== -->
+    <!-- ============================= -->
+    <!-- DELETE MODAL -->
+    <!-- ============================= -->
 
     <div
-        id="confirmModal"
-        class="modal"
-        aria-hidden="true"
+        id="deleteModal"
+        class="modal-overlay"
     >
 
-        <div class="modal-backdrop"></div>
+        <div class="modal-card delete-modal">
 
-        <div class="modal-box confirm-box">
+            <button
+                id="closeDeleteModal"
+                class="modal-close"
+            >
+                ×
+            </button>
 
-            <div class="confirm-icon">
-                🗑
+            <div class="modal-icon delete-icon">
+                🥺
             </div>
 
-            <h2 id="confirmTitle">
-                Delete task?
+            <h2>
+                Delete this task?
             </h2>
 
-            <p id="confirmText">
-                This action cannot be undone.
+            <p>
+                Are you sure you want to remove this little task?
             </p>
+
 
             <div class="modal-actions">
 
                 <button
-                    id="cancelConfirmButton"
-                    class="secondary-button"
-                    type="button"
+                    id="cancelDeleteBtn"
+                    class="modal-cancel"
                 >
-                    Cancel
+                    Keep it
                 </button>
 
                 <button
-                    id="confirmDeleteButton"
-                    class="danger-button"
-                    type="button"
+                    id="confirmDeleteBtn"
+                    class="modal-delete"
                 >
-                    Delete
+                    🗑️ Delete
                 </button>
 
             </div>
@@ -548,19 +741,29 @@
     </div>
 
 
-    <!-- =========================
-         TOAST
-    ========================== -->
+    <!-- ============================= -->
+    <!-- TOAST -->
+    <!-- ============================= -->
 
     <div
         id="toast"
         class="toast"
-        role="status"
     >
-        <span id="toastIcon">✓</span>
-        <span id="toastMessage">Task added</span>
+
+        <span id="toastIcon">
+            💕
+        </span>
+
+        <span id="toastMessage">
+            Done!
+        </span>
+
     </div>
 
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
 
     <script src="script.js"></script>
 
